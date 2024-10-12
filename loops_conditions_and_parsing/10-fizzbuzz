@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
-# a script to print information about the school file
-file="school"
-if [ -e $file ]; then
-    echo "school file exists"
-    if [ ! -d $file ] && [ -z "$(cat $file)" ]; then
-        echo "school file is empty"
+# a script to print fizzbuzz and numbers
+for i in $(seq 100); do
+    if ((i % 3 == 0)) && ((i % 5 == 0)); then
+        echo "FizzBuzz"
+    elif ((i % 3 == 0)); then
+        echo "Fizz"
+    elif ((i % 5 == 0)); then
+        echo "Buzz"
     else
-        echo "school file is not empty"
+        echo "$i"
     fi
-    if [ -f $file ]; then
-        echo "school is a regular file"
-    fi
-else
-    echo "school file does not exist"
-fi
+done
