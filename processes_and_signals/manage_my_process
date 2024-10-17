@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Define the output file
+output_file="/tmp/my_process"
+
+# Loop indefinitely
+while true; do
+    # Write the message to the file
+    echo "I am alive!" >> "$output_file"
+    
+    sleep 2
+done
