@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # a script to manage a process
-
 case $1 in
     start)
         ./manage_my_process &
